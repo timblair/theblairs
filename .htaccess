@@ -1,0 +1,4 @@
+DefaultType text/html
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .* /s [R=301,L]
