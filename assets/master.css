@@ -1,7 +1,7 @@
 body{background-color:#FFFFF0;}
 html,body,p,div{color:#424222;font-size:12px;font-family:"Adobe Caslon Pro","Hoefler Text",Georgia,Garamond,Times,serif;}
 div#wrapper{margin:150px auto 0 auto;width:600px;text-align:center;}
-#names{font-variant:small-caps;font-size:600%;margin-bottom:30px;}
+#names{font-weight:normal;font-variant:small-caps;font-size:600%;margin-bottom:30px;}
 #names span{position:relative;display:inline-block;margin:-40px;line-height:100px;}
 #names span.amp{font-family:Baskerville,Palatino,Constantia,"Palatino Linotype","Book Antiqua",serif;font-style:italic;font-size:250%;z-index:-1;color:#E6E6D0;top:30px;}
 h2,h3{letter-spacing:0.1em;font-weight:normal;font-variant:small-caps;}

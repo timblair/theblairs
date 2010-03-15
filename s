@@ -8,7 +8,7 @@
 <body>
 
 	<div id="wrapper">
-		<p id="names"><span class="tim">Tim</span> <span class="amp">&amp;</span> <span class="debbie">Debbie</span></p>
+		<h1 id="names"><span class="tim">Tim</span> <span class="amp">&amp;</span> <span class="debbie">Debbie</span></h1>
 		<h3 id="save">Save the Date</h3>
 		<h2 id="date">Wednesday, 29<span class="sup">th</span> December 2010</h2>
 		<hr />
