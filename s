@@ -4,6 +4,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Save the Date: Tim and Debbie</title>
 	<link rel="stylesheet" href="assets/master.css" type="text/css" charset="utf-8" />
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/ie.css" type="text/css" charset="utf-8" /><![endif]--> 
 </head>
 <body>
 
