@@ -1,4 +1,3 @@
 DefaultType text/html
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule .* /s [R=301,L]
+ErrorDocument 404 http://the.bla.ir/s
+
