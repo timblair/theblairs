@@ -8,13 +8,21 @@
 		%link{ :rel => "stylesheet", :href => "/css/master.css", :type => "text/css" }
 		/[if lt IE 8]
 			%link{ :rel => "stylesheet", :href => "/css/ie.css", :type => "text/css" }
-		%script{:src => "/js/modernizr-1.5.min.js"}
+		%script{:src => "/js/modernizr-1.5.min.js" }
+		%script{:src => "http://use.typekit.com/xvj2ebi.js" }
+		%script try { Typekit.load(); } catch(e) {}
 	%body
 
 		#container
 
+			#banner
+				%h2#names.tk-bello-pro
+					Debbie &amp; Tim
+				#date.tk-bello-caps
+					Are getting married on Wednesday the 29<sup>th</sup> December 2010
+
 			%header
-				%ul#nav
+				%ul#nav.tk-bello-caps
 					%li
 						%a{ :href => "/s" } Home
 					%li
@@ -29,7 +37,18 @@
 			#main
 				= yield
 
-			%footer footer...
+			%footer
+				#boxes
+					#who.box
+						%img{ :src => "/imgs/footer-us-jump.jpg", :width => "90", :height => "90", :align => "right" }
+						%h3.tk-bello-pro Who?
+						Tim is a geek.  Debbie is also a geek, but in a very different way.  Together, they throw plastic discs and lower each other up and down ropes.
+					#where.box.last
+						%a{ :href => "/s/location", :title => "More details on the location" }
+							%img{ :src => "/imgs/footer-map.png", :width => "90", :height => "90", :align => "right" }
+						%h3.tk-bello-pro Where &amp; When?
+						The fantastic, funky, fabulous Crazy Bear in the village of Stadhampton, Oxfordshire, on Wednesday, 29th December 2010 at 1:30pm.
+					%br{ :style => "clear: both" }
 
 	/
 		-# no SSL so we can shortcut things a bit

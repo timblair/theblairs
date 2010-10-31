@@ -1,0 +1,194 @@
+html,body,p,div {
+	font-size: 1em;
+	/* font-family: "Hoefler Text", Constantia, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif; */
+	font-family: Calibri, 'Gill Sans', 'Trebuchet MS', sans-serif;
+	line-height: 150%;
+}
+
+body {
+	/* background-color: #9C8AA5; */
+	background: #DDD url(../imgs/footer-bg-thin.png);
+}
+
+#container {
+	background-color: #FFFFFF;
+}
+
+#banner {
+	background-color: #421C52;
+	background: #421C52 url(../imgs/header-bg-thin.png);
+	color: #F1F0FF;
+	border-bottom: 1px solid #9C8AA5;
+	padding: 10px;
+	text-align: center;
+}
+
+#banner h2#names {
+	font-size: 500%;
+	font-weight: normal;
+	margin: 0.5em 0 0.3em;
+}
+
+#banner #date {
+	font-size: 130%;
+}
+
+header {
+	margin: 0 auto;
+	/* width: 960px; */
+	border-bottom: 1px solid #732C7B;
+	background: #DDD;
+}
+
+ul#nav {
+	text-align: center;
+	padding: 0.5em 0 0.3em;
+}
+ul#nav li {
+	display: inline-block;
+	font-size: 160%;
+	margin: 0 1em;
+}
+ul#nav li a {
+	text-decoration: none;
+	color: #666;
+}
+ul#nav li a:hover {
+	color: #421C52;
+}
+
+#main {
+	margin: 1em auto;
+	width: 800px;
+	min-height: 300px;
+}
+
+#main h1 {
+	margin: 1.5em 0 1em;
+	font-weight: normal;
+	font-size: 180%;
+	padding-bottom: 1em;
+	border-bottom: 1px solid #CCC;
+}
+
+hr {
+	width: 100%;
+	height: 1px;
+	color: #CCC;
+	border: none;
+	margin-bottom: 1em;
+}
+
+#cols .column {
+	margin-right: 20px;
+	width: 390px;
+	float: left;
+}
+
+#cols .column.right {
+	margin-right: 0;
+}
+
+
+#signature {
+	margin: 0.5em 0 0.7em;
+	font-weight: normal;
+	font-size: 180%;
+	text-align: right;
+}
+
+#signature.bordered {
+	border-top: 1px solid #CCC;
+	margin: 1em 0 0.7em;
+	padding-top: 0.8em;
+}
+
+
+/* GIFT LIST ============================= */
+
+#gifts {
+	margin-top: 1em;
+	padding-top: 1em;
+	border-top: 1px solid #CCC;
+}
+
+#gifts li {
+	margin-bottom: 1em;
+	padding: 0 50px 1em;
+	border-bottom: 1px solid #CCC;
+}
+
+#gifts li img {
+	float: left;
+	padding: 3px;
+	margin: 0 10px 0 10px;
+	border: 1px solid #421C52;
+}
+
+.gift-desc {
+	width: 70%;
+	float: left;
+}
+.gift-name {
+	font-weight: bold;
+}
+.gift-info {
+	font-size: 80%;
+}
+
+.gift-cost {
+	float: right;
+	text-align: center;
+	padding: 0.3em;
+	color: #666;
+	border: 1px solid #9C8AA5;
+	background-color: #DDD;
+}
+
+.gift-price {
+	font-size: 150%;
+}
+
+.gift-form {
+}
+
+.gift-form .submit {
+}
+
+
+/* FOOTER ================================ */
+
+footer {
+	margin-top: 10px;
+	border-top: 1px solid #732C7B;
+	background: #DDD url(../imgs/footer-bg-thin.png);
+}
+
+footer h3 {
+	font-weight: normal;
+	margin: 5px 0;
+	font-size: 120%
+}
+
+footer #boxes {
+	margin: 10px auto;
+	width: 800px;
+	font-size: 90%;
+}
+
+footer #boxes img {
+	padding: 3px;
+	margin: 0 0 0 10px;
+	border: 1px solid #421C52;
+}
+
+footer .box {
+	margin-right: 20px;
+	width: 390px;
+	float: left;
+}
+
+footer #where {
+	margin-right: 0;
+}
+
