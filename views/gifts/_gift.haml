@@ -10,11 +10,12 @@
 				%input{ :type => "hidden", :name => "cmd",           :value => "_donations" }
 				%input{ :type => "hidden", :name => "business",      :value => "FDVH9KBXBCHNW" }
 				%input{ :type => "hidden", :name => "amount",        :value => "#{gift.price.to_i.to_s}" }
-				%input{ :type => "hidden", :name => "item_name",     :value => "Gift for Tim and Debbie's wedding: #{gift.name}" }
+				%input{ :type => "hidden", :name => "item_name",     :value => "Gift for Debbie and Tim's wedding: #{gift.name}" }
 				%input{ :type => "hidden", :name => "currency_code", :value => "GBP" }
 				%input{ :type => "hidden", :name => "no_shipping",   :value => "1" }
-				%input{ :type => "hidden", :name => "cn",            :value => "Leave a message for Tim and Debbie" }
+				%input{ :type => "hidden", :name => "cn",            :value => "Leave a message for Debbie and Tim" }
 				%input{ :type => "hidden", :name => "return",        :value => "http://the.bla.ir/s/gifts/thanks" }
 				%input{ :type => "hidden", :name => "cancel_return", :value => "http://the.bla.ir/s/gifts" }
+				%a.submit-link{ :href => "#", :onclick => "this.parentNode.submit(); return false;" } Give this
 				%input.submit{ :type => "submit", :value => "Give this" }
 	%br{ :style => "clear: both" }

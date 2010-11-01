@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'sinatra/base'
 require 'haml'
+require 'pony'
 require 'partials'
 
 module TheBlairs
@@ -16,8 +17,8 @@ module TheBlairs
     helpers Sinatra::Partials
 
     # common redirect points
-    get '/'   do redirect '/s', 301 end
-    get '/s/' do redirect '/s', 301 end
+    get '/' do redirect '/s', 301 end                       # index page is /s
+	get %r{(.*)/$} do redirect params[:captures], 301 end   # remove trailing slashes
 
     get '/s' do
       haml :index
@@ -26,6 +27,18 @@ module TheBlairs
     get '/s/gifts' do
       @gifts = Gift.all
       haml :gifts
+    end
+
+    post '/s/rsvp/respond' do
+      Pony.mail :to      => 'tim@bla.ir',
+                :from    => "#{params[:name]} <#{params[:email]}>",
+                :subject => "RSVP: #{params[:response].upcase} from #{params[:name]}",
+                :body    => erb(:"rsvp/_email")
+      haml :"rsvp/#{params[:response]}"
+    end
+
+    get '/s/rsvp/respond' do
+      redirect '/s/rsvp', 301
     end
 
     get '/s/*' do

@@ -1,2 +1,20 @@
 %h1.tk-bello-pro RSVP
 
+%form{ :action => "/s/rsvp/respond", :method => "post" }
+	%div
+		%label{ :for => "name" } Name
+		%input{ :type => "text", :name => "name" }
+	%div
+		%label{ :for => "email" } Email
+		%input{ :type => "text", :name => "email" }
+	%div
+		%label{ :for => "response" } Coming?
+		%select{ :name => "response" }
+			%option
+			%option{ :value => "yes" } Yes
+			%option{ :value => "no" } No
+	%div
+		%label{ :for => "info" } Info
+		%textarea{ :name => "info" }
+	%input{ :type => "submit" }
+
