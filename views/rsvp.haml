@@ -2,11 +2,15 @@
 
 %form#rsvp{ :action => "/s/rsvp/respond", :method => "post" }
 	%div#question
-		%label{ :for => "response" } Are you coming?
-		%select#response{ :name => "response" }
-			%option
-			%option{ :value => "yes" } Yes
-			%option{ :value => "no" } No
+		%span Are you coming?
+		%label
+			Yes
+			%input{ :type => 'radio', :name => 'response', :value => 'yes' }
+		
+		%label
+			No
+			%input{ :type => 'radio', :name => 'response', :value => 'no' }
+		  
 		%span.whisper (please say yes...)
 	#cols
 		.column

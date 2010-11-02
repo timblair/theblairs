@@ -289,6 +289,10 @@ hr {
 	font-size: 120%;
 }
 
+#rsvp #question span {
+	margin-right: 10px;
+}
+
 #rsvp #question {
 	padding-bottom: 1em;
 	margin-bottom: 1em;
@@ -298,6 +302,16 @@ hr {
 
 #rsvp #question div {
 	margin: 0 auto;
+}
+
+#rsvp #question label {
+	font-size: 130%;
+	margin-right: 10px;
+}
+
+#rsvp #question label input {
+	vertical-align: middle;
+	margin: 0;
 }
 
 #rsvp select {
@@ -314,6 +328,7 @@ hr {
 
 #rsvp .text-input {
 	width: 100%;
+	border: 1px solid #C7C7C7;
 }
 
 #rsvp #info {
