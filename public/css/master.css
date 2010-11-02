@@ -12,6 +12,12 @@ body {
 
 p { margin: 0.5em 0; }
 
+img {
+  -moz-box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.5); 
+  box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.5);
+}
+
 #container {
 	background-color: #FFFFFF;
 }
@@ -142,7 +148,6 @@ hr {
 .venue img {
 	float: left;
 	padding: 3px;
-	border: 1px solid #421C52;
 }
 
 .venue .detail {
@@ -200,7 +205,6 @@ hr {
 	float: left;
 	padding: 3px;
 	margin: 0 10px 0 10px;
-	border: 1px solid #421C52;
 }
 
 .gift-desc {
@@ -279,7 +283,6 @@ footer #boxes {
 footer #boxes img {
 	padding: 3px;
 	margin: 0 0 0 10px;
-	border: 1px solid #421C52;
 }
 
 footer .box {
