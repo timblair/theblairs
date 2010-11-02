@@ -1,20 +1,29 @@
 %h1.tk-bello-pro RSVP
 
-%form{ :action => "/s/rsvp/respond", :method => "post" }
-	%div
-		%label{ :for => "name" } Name
-		%input{ :type => "text", :name => "name" }
-	%div
-		%label{ :for => "email" } Email
-		%input{ :type => "text", :name => "email" }
-	%div
-		%label{ :for => "response" } Coming?
-		%select{ :name => "response" }
+%form#rsvp{ :action => "/s/rsvp/respond", :method => "post" }
+	%div#question
+		%label{ :for => "response" } Are you coming?
+		%select#response{ :name => "response" }
 			%option
 			%option{ :value => "yes" } Yes
 			%option{ :value => "no" } No
-	%div
-		%label{ :for => "info" } Info
-		%textarea{ :name => "info" }
-	%input{ :type => "submit" }
+		%span.whisper (please say yes...)
+	#cols
+		.column
+			%div.field
+				%label{ :for => "name" } Name
+				%input#name.text-input{ :type => "text", :name => "name" }= params[:name]
+			%div.field
+				%label{ :for => "email" } Email
+				%input#email.text-input{ :type => "text", :name => "email" }= params[:email]
+		.column.right
+			%div
+				%label{ :for => "info" }
+					Comments
+					%span.whisper (anything you want to tell us?)
+				%textarea#info.text-input{ :name => "info" }= params[:info]
+		%br{ :style => "clear: both" }
+	%a.submit-link{ :href => "#", :onclick => "this.parentNode.submit(); return false;" } Send RSVP
+	%input.submit{ :type => "submit", :value => "Send RSVP" }
+	%br{ :style => "clear: both" }
 

@@ -1,7 +1,6 @@
 html,body,p,div {
 	font-size: 1em;
-	/* font-family: "Hoefler Text", Constantia, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif; */
-	font-family: Calibri, 'Gill Sans', 'Trebuchet MS', sans-serif;
+	font-family: "Hoefler Text", Constantia, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
 	line-height: 150%;
 }
 
@@ -13,39 +12,46 @@ body {
 p { margin: 0.5em 0; }
 
 img {
-  -moz-box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.5); 
-  box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2, h3 {
+	font-family: "myriad-pro-1", "myriad-pro-2", sans-serif;
 }
 
 #container {
 	background-color: #FFFFFF;
+	border-bottom: 1px solid #999;
 }
 
 #banner {
-	background-color: #421C52;
-	background: #421C52 url(../imgs/header-bg-thin.png);
+	background-color: #4D2C50;
 	color: #F1F0FF;
-	border-bottom: 1px solid #9C8AA5;
-	padding: 10px;
+	border-bottom: 1px solid #241227;
+	padding: 1.5em 0 10px;
 	text-align: center;
 }
 
 #banner h2#names {
-	font-size: 500%;
-	font-weight: normal;
-	margin: 0.5em 0 0.3em;
+	display: inline-block;
+	width: 498px;
+	height: 75px;
+	background-image: url(../imgs/debbie_tim_title.png);
+	text-indent: -10000px;
+	margin: 20px 0;
 }
 
 #banner #date {
-	font-size: 130%;
+	font-family: "myriad-pro-1", "myriad-pro-2", sans-serif;
+	font-size: 80%;
 }
 
-header {
+#header {
 	margin: 0 auto;
-	/* width: 960px; */
-	border-bottom: 1px solid #732C7B;
 	background: #DDD;
+	border-bottom: 1px solid #999;
 }
 
 ul#nav {
@@ -53,15 +59,16 @@ ul#nav {
 	padding: 0.5em 0 0.3em;
 }
 ul#nav li {
+	font-family: "myriad-pro-1", "myriad-pro-2", sans-serif;
+	font-weight: bold;
 	display: inline-block;
-	font-size: 160%;
 	margin: 0 1em;
 }
 ul#nav li a {
 	text-decoration: none;
 	color: #666;
 }
-ul#nav li a:hover {
+ul#nav li a:hover, ul#nav li a.active {
 	color: #421C52;
 }
 
@@ -77,6 +84,10 @@ ul#nav li a:hover {
 	font-size: 180%;
 	padding-bottom: 1em;
 	border-bottom: 1px solid #CCC;
+}
+
+#main a {
+	color: #4D2C50;
 }
 
 hr {
@@ -99,16 +110,17 @@ hr {
 
 
 #signature {
-	margin: 0.5em 0 0.7em;
-	font-weight: normal;
-	font-size: 180%;
-	text-align: right;
+	width: 100%;
+	margin-top: 0.5em;
+	float: right;
+	width: 230px;
+	height: 49px;
+	background-image: url(../imgs/sig-med.png);
+	text-indent: -10000px;
 }
 
-#signature.bordered {
-	border-top: 1px solid #CCC;
-	margin: 1em 0 0.7em;
-	padding-top: 0.8em;
+#cols #signature {
+	margin-top: 2em;
 }
 
 
@@ -155,29 +167,31 @@ hr {
 	width: 41%;
 }
 
-.venue .links a {
+#main .venue .links a {
+	font-family: Calibri, 'Gill Sans', 'Trebuchet MS', sans-serif;
 	display: block;
 	float: left;
 	width: 6em;
 	color: #333;
 	text-decoration: none;
 	background-color: rgba(0,0,0,.1);
-	background-position: 12px center; 
+	background-position: 12px center;
 	background-repeat: no-repeat;
 	padding: 0.3em 0.4em 0.3em 2.1em;
 	margin-right: 0.5em;
-	
+
 	-webkit-border-radius: 19px;
 	-moz-border-radius: 19px;
 	border-radius: 19px;
-	
+
 	-webkit-box-shadow: inset 0 1px 0px rgba(0,0,0,.1);
 	-moz-box-shadow: inset 0 1px 0px rgba(0,0,0,.1);
 	box-shadow: inset 0 1px 0px rgba(0,0,0,.1);
 
 }
-.venue .links a:hover {
-	background-color: rgba(200,200,200,.7);
+#main .venue .links a:hover {
+	background-color: #4D2C50;
+	color: #F1F0FF;
 }
 .venue .links li.website a { background-image: url(../imgs/icons/world.png); }
 .venue .links li.website a:hover { background-image: url(../imgs/icons/world-on.png); }
@@ -231,10 +245,11 @@ hr {
 .gift-form {
 }
 
-.no-js .gift-form a.submit-link { display: none; }
-.js .gift-form .submit { display: none; }
+.no-js a.submit-link { display: none; }
+.js .submit { display: none; }
 
-.gift-form a.submit-link {
+#main a.submit-link {
+	font-family: Calibri, 'Gill Sans', 'Trebuchet MS', sans-serif;
 	text-align: left;
 	display: block;
 	float: left;
@@ -244,28 +259,89 @@ hr {
 	background: rgba(0,0,0,.1) 12px center no-repeat url(../imgs/icons/package.png);
 	padding: 0.3em 0.4em 0.3em 2.1em;
 	margin-right: 0.5em;
-	
+
 	-webkit-border-radius: 19px;
 	-moz-border-radius: 19px;
 	border-radius: 19px;
-	
+
 	-webkit-box-shadow: inset 0 1px 0px rgba(0,0,0,.1);
 	-moz-box-shadow: inset 0 1px 0px rgba(0,0,0,.1);
 	box-shadow: inset 0 1px 0px rgba(0,0,0,.1);
 
 }
-.gift-form a.submit-link:hover {
-	background-color: rgba(200,200,200,.7);
+#main a.submit-link:hover {
+	background-color: #4D2C50;
+	color: #F1F0FF;
 	background-image: url(../imgs/icons/package-on.png);
+}
+
+
+/* VENUE LIST ============================ */
+
+#rsvp {
+}
+
+#rsvp #cols label {
+	display: block;
+}
+
+#rsvp input, #rsvp select {
+	font-size: 120%;
+}
+
+#rsvp #question {
+	padding-bottom: 1em;
+	margin-bottom: 1em;
+	border-bottom: 1px solid #CCC;
+	text-align: center;
+}
+
+#rsvp #question div {
+	margin: 0 auto;
+}
+
+#rsvp select {
+	width: 4em;
+	margin: 0 0.5em;
+}
+
+#rsvp #cols {
+}
+
+#rsvp div.field {
+	margin-bottom: 1em;
+}
+
+#rsvp .text-input {
+	width: 100%;
+}
+
+#rsvp #info {
+	height: 8em;
+}
+
+#rsvp .whisper {
+	font-size: 80%;
+	color: #666;
+}
+
+#main #rsvp a.submit-link {
+	float: right;
+	margin: 0.5em 0;
+	width: 5em;
+	background-image: url(../imgs/icons/email.png);
+}
+
+#main #rsvp a.submit-link:hover {
+	background-image: url(../imgs/icons/email-on.png);
 }
 
 
 /* FOOTER ================================ */
 
 footer {
-	margin-top: 10px;
-	border-top: 1px solid #732C7B;
-	background: #DDD url(../imgs/footer-bg-thin.png);
+	margin-top: 15px;
+	margin-bottom: 50px;
 }
 
 footer h3 {
@@ -275,7 +351,7 @@ footer h3 {
 }
 
 footer #boxes {
-	margin: 10px auto;
+	margin: 15px auto;
 	width: 800px;
 	font-size: 90%;
 }
@@ -293,5 +369,23 @@ footer .box {
 
 footer #where {
 	margin-right: 0;
+}
+
+
+/* TICKER ================================ */
+
+#ticker {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	color: #241227;
+	background-color: #705673;
+	background-color: rgba(255, 255, 255, .2);
+	border-bottom: 1px solid #241227;
+	font-family: "myriad-pro-1", "myriad-pro-2", sans-serif;
+	font-size: 90%;
+	line-height: 2em;
 }
 

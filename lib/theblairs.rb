@@ -18,7 +18,7 @@ module TheBlairs
 
     # common redirect points
     get '/' do redirect '/s', 301 end                       # index page is /s
-	get %r{(.*)/$} do redirect params[:captures], 301 end   # remove trailing slashes
+  get %r{(.*)/$} do redirect params[:captures], 301 end   # remove trailing slashes
 
     get '/s' do
       haml :index
@@ -61,9 +61,28 @@ module TheBlairs
     helpers do
       def page_title
         # build a page title from the URL, assuming we're serving from /s/... for sub-pages
-        path = request.env['PATH_INFO'].split(/\//)[2..-1].map { |p| p.capitalize }.push("Tim and Debbie's Wedding")
+        path = (request.env['PATH_INFO'].split(/\//)[2] || []).map { |p| p.capitalize }.push("Tim and Debbie's Wedding")
         path[0].upcase! if path[0] == "Rsvp"  # a bit of hackery for the acronym
         path.join(" | ")
+      end
+
+      def current_section
+        request.env['PATH_INFO'].split(/\//)[2] || "home"
+      end
+
+      def ticker_text
+        the_day = Date.new(2010, 12, 29)
+        if Date.today == the_day
+          "Today's the day!"
+        else
+          diff = the_day - Date.today
+          word = diff.abs == 1 ? "day" : "days"
+          if diff > 0
+            "Time is ticking away: only #{diff} more #{word} to go!"
+          else
+            "Debbie and Tim have now been married for #{diff.abs} happy #{word}."
+          end
+        end
       end
     end
 

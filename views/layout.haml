@@ -16,39 +16,42 @@
 		#container
 
 			#banner
-				%h2#names.tk-bello-pro
+				%h2#names
 					Debbie &amp; Tim
-				#date.tk-bello-caps
-					Are getting married on Wednesday the 29<sup>th</sup> December 2010
+				#date
+					are getting married on Wednesday the 29<sup>th</sup> of December 2010
 
-			%header
-				%ul#nav.tk-bello-caps
+			#header
+				%ul#nav
 					%li
-						%a{ :href => "/s" } Home
+						%a{ :href => "/s", :class => ("active" if current_section == 'home') } Home
 					%li
-						%a{ :href => "/s/location" } Location
+						%a{ :href => "/s/location", :class => ("active" if current_section == 'location') } Location
 					%li
-						%a{ :href => "/s/accommodation" } Accommodation
+						%a{ :href => "/s/accommodation", :class => ("active" if current_section == 'accommodation') } Accommodation
 					%li
-						%a{ :href => "/s/gifts" } Gifts
+						%a{ :href => "/s/gifts", :class => ("active" if current_section == 'gifts') } Gifts
 					%li
-						%a{ :href => "/s/rsvp" } RSVP
+						%a{ :href => "/s/rsvp", :class => ("active" if current_section == 'rsvp') } RSVP
 
 			#main
 				= yield
 
-			%footer
-				#boxes
-					#who.box
+		%footer
+			#boxes
+				#who.box
+					%a{ :href => "http://www.flickr.com/photos/timblair/sets/72157625275124796/", :title => "Our wedding pre-shoot photos" }
 						%img{ :src => "/imgs/footer-us-jump.jpg", :width => "90", :height => "90", :align => "right" }
-						%h3.tk-bello-pro Who?
-						Tim is a geek.  Debbie is also a geek, but in a very different way.  Together, they throw plastic discs and lower each other up and down ropes.
-					#where.box.last
-						%a{ :href => "/s/location", :title => "More details on the location" }
-							%img{ :src => "/imgs/footer-map.png", :width => "90", :height => "90", :align => "right" }
-						%h3.tk-bello-pro Where &amp; When?
-						The fantastic, funky, fabulous Crazy Bear in the village of Stadhampton, Oxfordshire, on Wednesday, 29th December 2010 at 1:30pm.
-					%br{ :style => "clear: both" }
+					%h3 Who?
+					Tim is a geek.  Debbie is also a geek, but in a very different way.  They throw plastic discs and lower each other up and down ropes.
+				#where.box.last
+					%a{ :href => "/s/location", :title => "More details on the location" }
+						%img{ :src => "/imgs/footer-map.png", :width => "90", :height => "90", :align => "right" }
+					%h3 Where &amp; When?
+					The fantastic, funky, fabulous Crazy Bear in the village of Stadhampton, Oxfordshire, on Wednesday, 29th December 2010 at 1:30pm.
+				%br{ :style => "clear: both" }
+
+		#ticker= ticker_text
 
 	/
 		-# no SSL so we can shortcut things a bit
