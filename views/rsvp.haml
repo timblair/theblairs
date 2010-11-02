@@ -1,31 +1,29 @@
-%h1.tk-bello-pro RSVP
+%h1 RSVP
 
 %form#rsvp{ :action => "/s/rsvp/respond", :method => "post" }
 	%div#question
-		%span Are you coming?
+		%span{ :class => ('error-text' if !@errors[:response].nil?) } Are you coming?
 		%label
 			Yes
-			%input{ :type => 'radio', :name => 'response', :value => 'yes' }
-		
+			%input{ :type => 'radio', :name => 'response', :value => 'yes', :checked => ('checked' if params[:response] == 'yes') }
 		%label
 			No
-			%input{ :type => 'radio', :name => 'response', :value => 'no' }
-		  
+			%input{ :type => 'radio', :name => 'response', :value => 'no', :checked => ('checked' if params[:response] == 'no') }
 		%span.whisper (please say yes...)
 	#cols
 		.column
 			%div.field
-				%label{ :for => "name" } Name
-				%input#name.text-input{ :type => "text", :name => "name" }= params[:name]
+				%label{ :for => "name" } Guest Names
+				%input#name.text-input{ :type => "text", :name => "name", :value => params[:name], :class => ('error' if !@errors[:name].nil?) }
 			%div.field
-				%label{ :for => "email" } Email
-				%input#email.text-input{ :type => "text", :name => "email" }= params[:email]
+				%label{ :for => "email" } Contact Email
+				%input#email.text-input{ :type => "text", :name => "email", :value => params[:email], :class => ('error' if !@errors[:email].nil?) }
 		.column.right
 			%div
 				%label{ :for => "info" }
 					Comments
 					%span.whisper (anything you want to tell us?)
-				%textarea#info.text-input{ :name => "info" }= params[:info]
+				%textarea#info.text-input{ :name => "info", :class => ('error' if !@errors[:info].nil?) }= params[:info]
 		%br{ :style => "clear: both" }
 	%a.submit-link{ :href => "#", :onclick => "this.parentNode.submit(); return false;" } Send RSVP
 	%input.submit{ :type => "submit", :value => "Send RSVP" }

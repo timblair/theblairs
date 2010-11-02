@@ -1,3 +1,5 @@
 sinatra --version 1.0
 haml --version 3.0.18
+pony --version 1.0.1
+email_veracity --version 0.6.0
 

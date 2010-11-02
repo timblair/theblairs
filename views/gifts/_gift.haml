@@ -1,4 +1,4 @@
-%li
+%li{ :class => ('last' if gift.price.to_i == 0) }
 	-#%img{ :src => "/imgs/gifts/cocktail.jpg", :width => 70, :height => 70 }
 	%div.gift-desc
 		%div.gift-name= gift.name

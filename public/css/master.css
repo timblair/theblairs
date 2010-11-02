@@ -119,10 +119,6 @@ hr {
 	text-indent: -10000px;
 }
 
-#cols #signature {
-	margin-top: 2em;
-}
-
 
 /* VENUE LIST ============================ */
 
@@ -215,6 +211,10 @@ hr {
 	border-bottom: 1px solid #CCC;
 }
 
+#gifts li.last {
+	border-bottom: none;
+}
+
 #gifts li img {
 	float: left;
 	padding: 3px;
@@ -278,9 +278,6 @@ hr {
 
 /* VENUE LIST ============================ */
 
-#rsvp {
-}
-
 #rsvp #cols label {
 	display: block;
 }
@@ -319,9 +316,6 @@ hr {
 	margin: 0 0.5em;
 }
 
-#rsvp #cols {
-}
-
 #rsvp div.field {
 	margin-bottom: 1em;
 }
@@ -329,6 +323,14 @@ hr {
 #rsvp .text-input {
 	width: 100%;
 	border: 1px solid #C7C7C7;
+}
+
+#rsvp .error-text {
+	color: #C33;
+}
+#rsvp .error {
+	background-color: #FDD;
+	border: 1px solid #F99;
 }
 
 #rsvp #info {
