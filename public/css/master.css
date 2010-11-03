@@ -4,6 +4,11 @@ html,body,p,div {
 	line-height: 150%;
 }
 
+.cf:after       { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.cf             { display: inline-block; }
+html[xmlns] .cf { display: block; }
+* html .cf      { height: 1%; }
+
 body {
 	/* background-color: #9C8AA5; */
 	background: #DDD url(../imgs/footer-bg-thin.png);
@@ -50,18 +55,19 @@ h1, h2, h3 {
 
 #header {
 	margin: 0 auto;
-	background: #DDD;
+	background-color: #DDD;
 	border-bottom: 1px solid #999;
+	text-align: center;
 }
 
 ul#nav {
 	text-align: center;
-	padding: 0.5em 0 0.3em;
+	padding: 0.5em 0 0.2em;
 }
 ul#nav li {
 	font-family: "myriad-pro-1", "myriad-pro-2", sans-serif;
 	font-weight: bold;
-	display: inline-block;
+	float: left;
 	margin: 0 1em;
 }
 ul#nav li a {
@@ -361,8 +367,8 @@ hr {
 /* FOOTER ================================ */
 
 footer {
-	margin-top: 15px;
-	margin-bottom: 50px;
+	margin: 15px auto 50px;
+	text-align: center;
 }
 
 footer h3 {
@@ -375,11 +381,13 @@ footer #boxes {
 	margin: 15px auto;
 	width: 800px;
 	font-size: 90%;
+	text-align: left;
 }
 
 footer #boxes img {
 	padding: 3px;
 	margin: 0 0 0 10px;
+	float: right;
 }
 
 footer .box {
@@ -403,7 +411,6 @@ footer #where {
 	text-align: center;
 	color: #241227;
 	background-color: #705673;
-	background-color: rgba(255, 255, 255, .2);
 	border-bottom: 1px solid #241227;
 	font-family: "myriad-pro-1", "myriad-pro-2", sans-serif;
 	font-size: 90%;

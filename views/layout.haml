@@ -6,8 +6,6 @@
 		%title= page_title
 		%link{ :rel => "stylesheet", :href => "/css/reset.css", :type => "text/css" }
 		%link{ :rel => "stylesheet", :href => "/css/master.css", :type => "text/css" }
-		/[if lt IE 8]
-			%link{ :rel => "stylesheet", :href => "/css/ie.css", :type => "text/css" }
 		%script{:src => "/js/modernizr-1.5.min.js" }
 		%script{:src => "http://use.typekit.com/xvj2ebi.js" }
 		%script try { Typekit.load(); } catch(e) {}
@@ -22,7 +20,7 @@
 					are getting married on Wednesday the 29<sup>th</sup> of December 2010
 
 			#header
-				%ul#nav
+				%ul#nav.cf
 					%li
 						%a{ :href => "/s", :class => ("active" if current_section == 'home') } Home
 					%li
@@ -38,22 +36,22 @@
 				= yield
 
 		%footer
-			#boxes
+			#boxes.cf
 				#who.box
 					%a{ :href => "http://www.flickr.com/photos/timblair/sets/72157625275124796/", :title => "Our wedding pre-shoot photos" }
-						%img{ :src => "/imgs/footer-us-jump.jpg", :width => "90", :height => "90", :align => "right" }
+						%img{ :src => "/imgs/footer-us-jump.jpg", :width => "90", :height => "90" }
 					%h3 Who?
 					Tim is a geek.  Debbie is also a geek, but in a very different way.  They throw plastic discs and lower each other up and down ropes.
 				#where.box.last
 					%a{ :href => "/s/location", :title => "More details on the location" }
-						%img{ :src => "/imgs/footer-map.png", :width => "90", :height => "90", :align => "right" }
+						%img{ :src => "/imgs/footer-map.png", :width => "90", :height => "90" }
 					%h3 Where &amp; When?
 					The fantastic, funky, fabulous Crazy Bear in the village of Stadhampton, Oxfordshire, on Wednesday, 29th December 2010 at 1:30pm.
-				%br{ :style => "clear: both" }
 
 		#ticker= ticker_text
 
-	-# no SSL so we can shortcut things a bit
-	%script{ :src => "http://www.google-analytics.com/ga.js" }
-	%script try { var t = _gat._getTracker("UA-15793856-1"); t._trackPageview(); } catch(err) {}
+	/
+		-# no SSL so we can shortcut things a bit
+		%script{ :src => "http://www.google-analytics.com/ga.js" }
+		%script try { var t = _gat._getTracker("UA-15793856-1"); t._trackPageview(); } catch(err) {}
 

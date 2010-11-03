@@ -1,6 +1,6 @@
 %h1 RSVP
 
-%form#rsvp{ :action => "/s/rsvp/respond", :method => "post" }
+%form#rsvp.cf{ :action => "/s/rsvp/respond", :method => "post" }
 	%div#question
 		%span{ :class => ('error-text' if !@errors[:response].nil?) } Are you coming?
 		%label
@@ -10,7 +10,7 @@
 			No
 			%input{ :type => 'radio', :name => 'response', :value => 'no', :checked => ('checked' if params[:response] == 'no') }
 		%span.whisper (please say yes...)
-	#cols
+	#cols.cf
 		.column
 			%div.field
 				%label{ :for => "name" } Guest Names
@@ -24,8 +24,6 @@
 					Comments
 					%span.whisper (anything you want to tell us?)
 				%textarea#info.text-input{ :name => "info", :class => ('error' if !@errors[:info].nil?) }= params[:info]
-		%br{ :style => "clear: both" }
 	%a.submit-link{ :href => "#", :onclick => "this.parentNode.submit(); return false;" } Send RSVP
 	%input.submit{ :type => "submit", :value => "Send RSVP" }
-	%br{ :style => "clear: both" }
 

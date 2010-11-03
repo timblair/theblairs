@@ -1,4 +1,4 @@
-%li{ :class => ('last' if gift.price.to_i == 0) }
+%li.cf{ :class => ('last' if gift.price.to_i == 0) }
 	-#%img{ :src => "/imgs/gifts/cocktail.jpg", :width => 70, :height => 70 }
 	%div.gift-desc
 		%div.gift-name= gift.name
@@ -18,4 +18,3 @@
 				%input{ :type => "hidden", :name => "cancel_return", :value => "http://the.bla.ir/s/gifts" }
 				%a.submit-link{ :href => "#", :onclick => "this.parentNode.submit(); return false;" } Give this
 				%input.submit{ :type => "submit", :value => "Give this" }
-	%br{ :style => "clear: both" }
