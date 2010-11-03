@@ -4,10 +4,23 @@ html,body,p,div {
 	line-height: 150%;
 }
 
-.cf:after       { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
-.cf             { display: inline-block; }
-html[xmlns] .cf { display: block; }
-* html .cf      { height: 1%; }
+/* float clearing for IE6 */
+* html .cf {
+ height: 1%;
+ overflow: visible; }
+
+/* float clearing for IE7 */
+* + html .cf {
+ min-height: 1%; }
+
+/* float clearing for everyone else */
+.cf:after {
+ clear: both;
+ content: ".";
+ display: block;
+ height: 0;
+ visibility: hidden;
+ font-size: 0; }
 
 body {
 	/* background-color: #9C8AA5; */
@@ -35,45 +48,53 @@ h1, h2, h3 {
 	background-color: #4D2C50;
 	color: #F1F0FF;
 	border-bottom: 1px solid #241227;
-	padding: 1.5em 0 10px;
 	text-align: center;
+	padding-top: 2.5em;
 }
 
 #banner h2#names {
-	display: inline-block;
+	display: block;
 	width: 498px;
 	height: 75px;
 	background-image: url(../imgs/debbie_tim_title.png);
 	text-indent: -10000px;
-	margin: 20px 0;
+/*  margin: 20px 0;*/
+	margin: 0 auto 20px auto;
 }
 
 #banner #date {
 	font-family: "myriad-pro-1", "myriad-pro-2", sans-serif;
 	font-size: 80%;
+	margin-bottom: 10px;
 }
 
 #header {
-	margin: 0 auto;
+	width: 100%;
 	background-color: #DDD;
 	border-bottom: 1px solid #999;
 	text-align: center;
 }
 
 ul#nav {
-	text-align: center;
+  display: inline;
+  width: auto;
+  margin: 0 auto;
 	padding: 0.5em 0 0.2em;
+	line-height: 2.5em;
 }
+
 ul#nav li {
 	font-family: "myriad-pro-1", "myriad-pro-2", sans-serif;
 	font-weight: bold;
-	float: left;
+	display: inline;
 	margin: 0 1em;
 }
+
 ul#nav li a {
 	text-decoration: none;
 	color: #666;
 }
+
 ul#nav li a:hover, ul#nav li a.active {
 	color: #421C52;
 }
@@ -104,9 +125,13 @@ hr {
 	margin-bottom: 1em;
 }
 
+#cols {
+  margin-bottom: 20px;
+}
+
 #cols .column {
 	margin-right: 20px;
-	width: 390px;
+	width: 385px;
 	float: left;
 }
 
@@ -173,18 +198,28 @@ hr {
 	width: 41%;
 }
 
+
+#main .venue .links {
+  list-style: none;
+}
+
+#main .venue .links li {
+  display: block;
+  float: left;
+}
+
 #main .venue .links a {
 	font-family: Calibri, 'Gill Sans', 'Trebuchet MS', sans-serif;
 	display: block;
 	float: left;
-	width: 6em;
+	width: 5.5em;
 	color: #333;
 	text-decoration: none;
-	background-color: rgba(0,0,0,.1);
+	background-color: #e0e0e0;
 	background-position: 12px center;
 	background-repeat: no-repeat;
 	padding: 0.3em 0.4em 0.3em 2.1em;
-	margin-right: 0.5em;
+  margin-right: 0.5em;
 
 	-webkit-border-radius: 19px;
 	-moz-border-radius: 19px;
@@ -266,7 +301,7 @@ hr {
 	width: 4.3em;
 	color: #333;
 	text-decoration: none;
-	background: rgba(0,0,0,.1) 12px center no-repeat url(../imgs/icons/package.png);
+	background: #e0e0e0 12px center no-repeat url(../imgs/icons/package.png);
 	padding: 0.3em 0.4em 0.3em 2.1em;
 	margin-right: 0.5em;
 
@@ -287,6 +322,10 @@ hr {
 
 
 /* VENUE LIST ============================ */
+
+#rsvp {
+  margin-bottom: 20px;
+}
 
 #rsvp #cols label {
 	display: block;
@@ -369,6 +408,7 @@ hr {
 footer {
 	margin: 15px auto 50px;
 	text-align: center;
+	width: 800px;
 }
 
 footer h3 {
