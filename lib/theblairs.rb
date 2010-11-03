@@ -49,10 +49,18 @@ module TheBlairs
       end
 
       if @errors.keys.length == 0
-        Pony.mail :to      => 'wedding@bla.ir',
+        mail = Pony.mail :to      => 'tim.blair@gmail.com',
                   :from    => "#{params[:name]} <#{params[:email]}>",
                   :subject => "RSVP: #{params[:response].upcase} from #{params[:name]}",
-                  :body    => erb(:"rsvp/_email")
+                  :body    => erb(:"rsvp/_email"),
+                  :via_options => {
+                      :address        => "smtp.sendgrid.net",
+                      :port           => "25",
+                      :authentication => :plain,
+                      :user_name      => ENV['SENDGRID_USERNAME'],
+                      :password       => ENV['SENDGRID_PASSWORD'],
+                      :domain         => ENV['SENDGRID_DOMAIN']
+                  }
         haml :"rsvp/#{params[:response]}"
       else
         haml :rsvp
