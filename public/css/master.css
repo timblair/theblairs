@@ -119,6 +119,10 @@ hr {
 	text-indent: -10000px;
 }
 
+#cols #signature {
+	margin-bottom: 1em;
+}
+
 
 /* VENUE LIST ============================ */
 
