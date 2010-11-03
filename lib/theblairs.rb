@@ -57,6 +57,7 @@ module TheBlairs
                   :from    => "#{params[:name]} <#{params[:email]}>",
                   :subject => "RSVP: #{params[:response].upcase} from #{params[:name]}",
                   :body    => erb(:"rsvp/_email"),
+                  :via     => :smtp,
                   :via_options => {
                       :address        => "smtp.sendgrid.net",
                       :port           => "25",
