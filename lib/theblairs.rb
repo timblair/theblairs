@@ -53,7 +53,7 @@ module TheBlairs
       end
 
       if @errors.keys.length == 0
-        mail = Pony.mail :to      => 'tim.blair@gmail.com',
+        mail = Pony.mail :to      => 'wedding@bla.ir',
                   :from    => "#{params[:name]} <#{params[:email]}>",
                   :subject => "RSVP: #{params[:response].upcase} from #{params[:name]}",
                   :body    => erb(:"rsvp/_email"),
