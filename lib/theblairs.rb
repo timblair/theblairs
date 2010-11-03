@@ -19,7 +19,7 @@ module TheBlairs
 
     # common redirect points
     get '/' do redirect '/s', 301 end                       # index page is /s
-  get %r{(.*)/$} do redirect params[:captures], 301 end   # remove trailing slashes
+    get %r{(.*)/$} do redirect params[:captures], 301 end   # remove trailing slashes
 
     get '/s' do
       haml :index
@@ -28,6 +28,10 @@ module TheBlairs
     get '/s/gifts' do
       @gifts = Gift.all
       haml :gifts
+    end
+
+    post '/s/gifts/thanks' do
+      haml :"gifts/thanks"
     end
 
     get '/s/rsvp' do
